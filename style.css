@@ -13,9 +13,13 @@ body{
     position: absolute;
     left: 100px;
     top: 150px;
+    transition-duration: 0.4s;
   }
 
-  .btn:hover {background: #eee;}
+  .btn:hover {
+      background-color: #4CAF50; /* Green */
+      color: white;
+    }
   .success {color: green;}
 
 
