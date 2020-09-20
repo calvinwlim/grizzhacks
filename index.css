@@ -49,14 +49,14 @@ body {
     position: relative;
 }
 
-.dragon {
+.octopus {
     width: 200px;
     height: 140px;
     transform-origin: 50% 80%;
     animation: zoomIn .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
 }
 
-.dragon .body {
+.octopus .body {
     position: absolute;
     top: 0;
     right: 0;
@@ -67,35 +67,9 @@ body {
     z-index: 10;
 }
 
-.dragon .horn-left {
-    position: absolute;
-    top: -17px;
-    left: 32px;
-    width: 31px;
-    height: 31px;
-    background: url(./img/horn-left.png) no-repeat;
-    background-size: contain;
-    z-index: 9;
-    transform-origin: 150% 200%;
-    transform: rotate(-5deg);
-    animation: swingRight .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
-}
 
-.dragon .horn-right {
-    position: absolute;
-    top: -16px;
-    left: 110px;
-    width: 34px;
-    height: 31px;
-    background: url(./img/horn-right.png) no-repeat;
-    background-size: contain;
-    z-index: 9;
-    transform-origin: -50% 200%;
-    transform: rotate(5deg);
-    animation: swingLeft .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
-}
 
-.dragon .eye {
+.octopus .eye {
     position: absolute;
     top: 39px;
     width: 11px;
@@ -105,36 +79,21 @@ body {
     z-index: 12;
 }
 
-.dragon .eye.left {
+.octopus .eye.left {
     left: 49px;
 }
 
-.dragon .eye.right {
+.octopus .eye.right {
     left: 118px;
     transform-origin: 50% 50%;
     transform: rotate(180deg);
 }
 
-.dragon .blush {
-    position: absolute;
-    top: 46px;
-    width: 15px;
-    height: 9px;
-    background: url(./img/blush.png) no-repeat;
-    background-size: 100% 100%;
-    z-index: 11;
-    animation: blush .5s ease infinite alternate;
-}
 
-.dragon .blush.left {
-    left: 43px;
-}
 
-.dragon .blush.right {
-    left: 120px;
-}
 
-.dragon .mouth {
+
+.octopus .mouth {
     position: absolute;
     top: 52px;
     left: 49px;
@@ -146,18 +105,7 @@ body {
     animation: openMouth 1s ease infinite;
 }
 
-.dragon .tail-sting {
-    position: absolute;
-    top: 67px;
-    left: 139px;
-    width: 40px;
-    height: 38px;
-    background: url(./img/tail-sting.png) no-repeat;
-    background-size: contain;
-    z-index: 9;
-    transform-origin: 0 100%;
-    animation: tailUp .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
-}
+
 
 .shadow-wrapper {
     position: absolute;
