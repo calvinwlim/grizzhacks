@@ -13,7 +13,7 @@ const settings = require('./settings.js');
     // launch the browser
     const browser = await puppeteer.launch({
       headless: false,
-
+      args: ['--start-fullscreen']
     });
   // create a new tab
     const page = await browser.newPage();
@@ -28,4 +28,22 @@ const settings = require('./settings.js');
     console.log('inputted password...');
     await page.keyboard.press('Enter');
     console.log('logging in...');
-  })();
+    await delay(3500);
+    await page.click('#react-root > section > main > div > div > div > div > button');
+    await delay(2000);
+    await page.goto('https://www.instagram.com/nature/');
+    await delay(2000);
+    const links = await page.evaluate(() => 
+    // let's just get all links and create an array from the resulting NodeList
+     Array.from(document.querySelectorAll("a")).map(anchor => [anchor.href, anchor.textContent])
+     );
+
+    // output all the links
+    console.log(links);
+    mostRecentPost = links[5];
+    console.log(mostRecentPost);
+    await page.screenshot({
+      path: './assets/photo.png',
+      clip: {x: 245, y: 417, width: 298, height: 290}
+    })
+  })
